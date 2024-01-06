@@ -5,6 +5,7 @@ function AnswerPage() {
 	const[questionList,setQuestionList]=useState()
 	const {questionid}= useParams()
 	let token = localStorage.getItem("token");
+	
     async function fetchSingleQuestions() {
 			try {
 				let {data}  = await axios.get(`/questions/${questionid}`, {
