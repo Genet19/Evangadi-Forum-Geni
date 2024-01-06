@@ -24,7 +24,7 @@ async function singleQuestion(req, res) {
 	// let userid = req.user.userid;
 	const questionid = req.params.questionid;
 
-	// console.log(questionid);
+	
 	try {
 		let [question] = await dbConnection.query(
 			"select * from questions where questionid=?",
